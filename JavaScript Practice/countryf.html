@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Rank Find</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="ChatGPT Image Dec 18, 2025, 10_42_44 PM.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        font-size: 62.5%;
+    }
+
+    body {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background: #0f0c2982; */
+         background-image: linear-gradient(to bottom, #0f0c29ec, #0f0c29ec), url("Gemini_Generated_Image_e8gxkpe8gxkpe8gx.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        /* background: #0f0c29; */
+    }
+
+    .title {
+        font-family: "Poppins", sans-serif;
+        font-size: 7rem;
+        text-transform: uppercase;
+        color: #f7c948;
+        width: auto;
+        position: relative;
+        letter-spacing: 2px;
+        font-weight: 800;
+    }
+
+    .title::before {
+        content: "Check your Country Passport Rank";
+        position: absolute;
+        height: 5.2rem;
+        overflow: hidden;
+        z-index: 10;
+        left: 0;
+        width: 100%;
+        color: #fff;
+    }
+
+    .title::after {
+        content: "Check your Country Passport Rank";
+        position: absolute;
+        height: 8rem;
+        overflow: hidden;
+        z-index: 10;
+        left: 0;
+        width: 100%;
+        /* color: #fff; */
+        z-index: 50;
+        animation: reveal 3.9s linear infinite 0.5s backwards;
+    }
+
+    @keyframes reveal {
+        0% {
+            width: 0;
+            color: rgba(128, 255, 0, 0.505)
+        }
+
+        25% {
+            color: rgba(128, 255, 0, 0.505);
+            width: 107%;
+        }
+
+        50% {
+            color: rgba(128, 255, 0, 0.505);
+            width: 0%;
+        }
+
+        52% {
+            color: rgba(255, 0, 0, 0.6);
+            width: 2%;
+        }
+
+        80% {
+            color: rgba(255, 0, 0, 0.6);
+            width: 107%;
+        }
+
+        100% {
+            color: rgba(255, 0, 0, 0.6);
+            width: 0%;
+        }
+
+    }
+
+    @media screen and (max-width: 1640px) {
+        html {
+            font-size: 50%;
+        }
+    }
+</style>
+
+<body>
+    <h1 class="title">Check your Country Passport Rank</h1>
+
+    <script src="countryf.js"></script>
+</body>
+
+</html>
