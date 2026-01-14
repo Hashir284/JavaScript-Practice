@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var cityToCheck = prompt("Enter your city"); // Ask the user for a city
+        cityToCheck = cityToCheck.toLowerCase(); // Convert input to lowercase so comparison is case-insensitive
+        var cleanestCities = ["cheyenne", "santa fe", "tucson", "great falls", "honolulu"]; // List of clean cities
+
+        for (var i = 0; i < cleanestCities.length; i++) { // Loop through each city in the array
+            if (cityToCheck === cleanestCities[i]) { // Check if user input matches any city
+                alert("It's one of the cleanest cities"); // Show alert if it matches
+            }
+        }
+
+    </script>
+</body>
+
+</html>
