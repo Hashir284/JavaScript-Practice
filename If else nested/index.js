@@ -21,7 +21,7 @@ if(a > b){
     console.log('A is greater then c and A is less then b');
 }else if(a < c){
     if(a < b){
-        console.log('A is less c and b'); 
+        console.log('A is less then c and b'); 
     }
 }
 

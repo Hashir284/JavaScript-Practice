@@ -30,6 +30,7 @@ console.log(text.charAt(text.length - 1));
 console.log(text.charAt(17));
 console.log(text.charAt(18));
 
+
 var arr = [10, 20, 30, 80, 23, 30, 78, 90];
 console.log(arr.lastIndexOf(30));
 
