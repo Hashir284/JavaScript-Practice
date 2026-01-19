@@ -1,4 +1,4 @@
-// alert()
+// alert() .
 
 let cities = ["Karachi", "Lahore", "Islamabad", "Peshawar", "Quetta"];
 
