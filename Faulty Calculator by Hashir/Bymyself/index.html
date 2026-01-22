@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faulty Calculator</title>
+</head>
+
+<body>
+    <div>
+        <label for="v1">Enter the Value one</label>
+        <div>
+            <input type="number" id="v1">
+        </div>
+    </div>
+    <div>
+        <label for="v2">Enter the Value two</label>
+        <div>
+            <input type="number" id="v2">
+        </div>
+    </div>
+    <div class="select">
+        <select id="select">
+            <option value="+">Plus</option>
+            <option value="-">Minus</option>
+            <option value="/">Divide</option>
+            <option value="*">Multiply</option>
+            <option value="**">Exponential</option>
+        </select>
+    </div>
+    <div class="btn">
+        <button onclick="get()">
+            Submit
+        </button>
+    </div>
+    <div id="answer">
+    
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
