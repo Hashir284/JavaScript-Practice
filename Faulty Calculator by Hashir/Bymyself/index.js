@@ -10,20 +10,20 @@ function get() {
     for(let i=0; i<arr.length; i++){
         if(select===arr[i]){ 
         if(arr[i]=='+'){
-            Oper = Math.random()>0.1 ? v1+v2 : v1-v2
+            Oper = Math.random()>0.23 ? v1+v2 : v1-v2
             break
         }else if(arr[i]=='-'){
-            Oper = Math.random()>0.1 ? v1-v2 : v1/v2
+            Oper = Math.random()>0.23 ? v1-v2 : v1/v2
             break
         }else if(arr[i]=='*'){
-            Oper = Math.random()>0.1 ? v1*v2 : v1+v2
+            Oper = Math.random()>0.23 ? v1*v2 : v1+v2
             break
         }else if(arr[i]=='/'){
-            Oper = Math.random()>0.1 ? v1/v2 : v1**v2
+            Oper = Math.random()>0.23 ? v1/v2 : v1**v2
             break
         }
         else if(arr[i]=='**'){
-            Oper = Math.random()>0.1 ? v1**v2 : v1+v2-5+v2*v2+4
+            Oper = Math.random()>0.23 ? v1**v2 : v1+v2-5+v2*v2+4
             break
         }
         }
