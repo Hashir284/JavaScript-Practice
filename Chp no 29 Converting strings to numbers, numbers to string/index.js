@@ -12,7 +12,7 @@ console.log(integerstring);
 
 let priceOfkeyboardandmouseset = '2600rupees'
 let text = '6.5%'
-let salingPrice = parseInt(priceOfkeyboardandmouseset) + (parseFloat(priceOfkeyboardandmouseset) / 100 * parseFloat(text))
+let salingPrice = parseFloat(priceOfkeyboardandmouseset) + (parseFloat(priceOfkeyboardandmouseset) / 100 * parseFloat(text))
 console.log(salingPrice);
 
 //  .tofixed() method   //// ye method number ko string mein bhi convert kerdeta he

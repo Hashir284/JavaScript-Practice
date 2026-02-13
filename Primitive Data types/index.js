@@ -79,4 +79,4 @@ console.log('Type of object property name is', typeof person.name);
 console.log('Type of object property age is', typeof person.age);
 console.log('Type of object property isStudent is', typeof person.isStudent);  
 
-console.log(typeof '');
+console.log(typeof ''); 

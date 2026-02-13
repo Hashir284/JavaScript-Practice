@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        img {
+            transition: all 1s linear;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Chapter no 45 -->
+    <!-- Event i) onClick -->
+    <a href="#" onClick="alert('Hi1');">Click</a>
+    <br>
+    <br>
+    <a href="JavaScript:void(0)" onClick="alert('Hi2');">Click</a>
+    <br>
+    <br>
+    <a href="JavaScript:void(0)" onClick='var greet="hi3"; alert(greet)'>Click</a>
+    <br>
+    <br>
+
+    <!-- Chapter no 46 -->
+    <input type="button" value="Click" onClick="alert('Hello world!');">
+    <input type="submit" value="Click" onClick="alert('Hello world!');">
+    <br>
+    <br>
+
+    <!-- Chapter no 47 -->
+    <!-- Event ii) onmouseover or onmouseenter -->
+    <!-- Event iii) onmouseout or onmouseleave -->
+    <img src="download.jpg" onmouseover="src='download (1).jpg'" onmouseout="src='download.jpg'" width="300px"
+        height="280px">
+    <br>
+    <h1 onMouseover="alert('Be sure to get your shopping done today.');" style="display: inline-block;">World Ends
+        Tomorrow</h1>
+    <br>
+    <br>
+    <a href="index.html" onMouseover="this.style.color='green';" onMouseout="this.style.color='yellow';">Home Page</a>
+    <br>
+    <br>
+    <p class="lorem" id="lorem"></p>
+
+    <!-- Chapter no 48 and 49-->
+    <!-- Event iv) onfocus-->
+    <!-- Event v) onblur-->
+    <form onsubmit="checkAddress('input'); return false">
+        <label for="input">
+            Email:
+            <input type="text" size="30" onFocus="this.style.backgroundColor='yellow'; this.style.color='blue'"
+                id="input" onBlur="this.style.backgroundColor='white';">
+        </label>
+        <button>Submit</button>
+    </form>
+
+
+    <script>
+        let p = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, cupiditate rem tempore accusantium quia voluptatibus ut officia assumenda praesentium quasi vel omnis necessitatibus? Culpa modi accusantium aliquam amet dicta sunt, voluptatibus doloribus laborum? Numquam, aperiam nemo velit libero dicta harum esse dolores debitis delectus repudiandae, voluptatibus cupiditate vitae sunt porro. Laborum nisi perferendis dicta, est incidunt ratione provident esse, voluptates nobis non recusandae? Sit saepe voluptas reprehenderit sequi reiciendis accusamus beatae magnam ut soluta excepturi porro praesentium neque nemo facilis esse ipsa quam, eaque animi. Expedita beatae unde laborum. Eum repudiandae voluptate magni recusandae molestias quo omnis exercitationem ut reprehenderit reiciendis quas sapiente dolorem sint dignissimos cumque nesciunt possimus perspiciatis nisi veniam, tempora nihil. Magni voluptates suscipit, perspiciatis sunt quia dignissimos rem. Eos odit repellat architecto quaerat quia, distinctio ut eum incidunt totam nulla provident modi ratione obcaecati quidem amet maiores nihil. In consectetur officiis repudiandae fugiat culpa, nostrum reiciendis qui obcaecati deserunt dolorem eligendi nihil repellat iste dolore unde labore ad sint inventore odit quia dolor hic sequi. Maxime adipisci provident delectus, sint molestiae enim alias quod ullam possimus nobis sequi debitis quis voluptatibus repudiandae ipsam exercitationem eaque molestias voluptas placeat. Ipsam cupiditate inventore voluptates autem, quaerat laudantium nobis nam eos eius quidem commodi iusto, fuga explicabo maxime aut corporis ratione. Illum mollitia laudantium, iusto sunt magnam consectetur quia omnis reiciendis, illo sint in, officiis ex tempore magni. Sapiente porro quia nobis repellat recusandae esse delectus modi eveniet quam qui reprehenderit aspernatur cupiditate architecto minus molestiae voluptates, itaque praesentium.'
+        document.getElementById('lorem').innerHTML = p.slice(0, 100) + ' <button onclick="decreament()">See More</button>'
+
+        function decreament() {
+            document.getElementById('lorem').innerHTML = p.slice(0) + ' <button onclick="expand()">See less</button>'
+        }
+        function expand() {
+            document.getElementById('lorem').innerHTML = p.slice(0, 100) + ' <button onclick="decreament()">See More</button>'
+        }
+
+        function checkAddress(fieldId) {
+            if (document.getElementById(fieldId).value === "") {
+                alert("Email address required.");
+            }
+        }
+    </script>
+</body>
+
+</html>
