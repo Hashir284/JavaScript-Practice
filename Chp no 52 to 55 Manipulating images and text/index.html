@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter no 52</title>
+</head>
+
+<style>
+    .visible {
+        /* visibility: visible; */
+display: inline;
+    }
+    .hidden{
+        /* visibility: hidden; */
+display: none;
+    }
+</style>
+
+<body>
+    <img src="../img.jpg" id="ugly" class="img" onmouseover="makeInvisible();" onmouseleave="makeInvisible(1)" width="200px" height="200px">
+    <img src="../img.jpg" onmouseover="src='../img2.jpg'" onmouseleave='src="../img.jpg"' width="600px" height="400px">
+    <img src="../img.jpg" id="before" onMouseover="swapPic(id, '../img2.jpg');" onmouseleave="swapPic(id, '../img.jpg');" width="300px" height="300px">
+    <script>
+        function makeInvisible(i) {
+            // if (i === 1) {
+            //     document.getElementById('ugly').style.display = 'inline';
+            // } else if(i != 1){
+            //     document.getElementById('ugly').style.display = 'none';
+            // }
+            // or
+            if (i === 1) {
+                document.getElementById('ugly').className = 'visible';
+            } else if (i != 1) {
+                document.getElementById('ugly').className = 'hidden';
+            }
+        }
+        function swapPic(id, srcc){
+            document.getElementById(id).src = srcc;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,7 +1,7 @@
-let dayofweek = 'Saturday'
+let dayofweek = 1
 
 switch (dayofweek) {
-    case '1':
+    case 1:
         console.log('Whoopee');
         break
     case 'Sunday':

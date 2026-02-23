@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Target all elements by tag name</title>
+</head>
+
+<body>
+    <p>para 1</p>
+    <p>para 2</p>
+    <p>para 3</p>
+    <table>
+        <tr>
+            <td>td 1</td>
+            <td>td 2</td>
+            <td>td 3</td>
+        </tr>
+    </table>
+    <button onclick="fun()">Click</button>
+    <script>
+        // document.write(document.getElementsByTagName('p'));
+        console.log(document.getElementsByTagName('p'));
+        console.log(document.getElementsByTagName('p').innerHTML);
+        let p = document.getElementsByTagName('p')
+        console.log(p[1].innerHTML);
+        console.log(p[1].innerText);
+        function fun() {
+            p[0].innerText = 'Update Para 1'
+            for (let i = 0; i < p.length; i++) {
+                p[i].style.fontFamily = "Verdana, Geneva, sans-serif";
+            }
+            let cells = document.getElementsByTagName("td");
+            for (let i = 0; i < cells.length; i++) {
+                cells[i].style.fontFamily = "Verdana, Geneva, sans-serif";
+                cells[i].style.backgroundColor = "pink";
+                cells[i].style.padding = "20px";
+                cells[i].style.fontSize = "40px";
+            }
+    
+        }
+    </script>
+</body>
+
+</html>

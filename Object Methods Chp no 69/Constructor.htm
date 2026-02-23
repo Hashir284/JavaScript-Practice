@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Methods</title>
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #000;
+    }
+
+    th,
+    td,
+    table,
+    tr {
+        padding: 20px;
+        text-align: center;
+        border: 2px solid white;
+        border-spacing: 10px 20px;
+        empty-cells: hide;
+    }
+
+    caption {
+        font-size: 30px;
+        font-weight: bold;
+        margin: 30px 0;
+    }
+</style>
+
+<body>
+    <table id="table">
+        <caption>Hosting Plans</caption>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Basic</th>
+                <th>Professional</th>
+                <th>Ultimate</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+    <script>
+        // let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+
+        // let basic = {
+        //     Monthly: '$3',
+        //     diskSpace: '100GB',
+        //     dataTransfer: '1000GB/Mo',
+        //     sitePages: 10,
+        //     discountMonths: [6, 7]
+        // }
+        // let professional = {
+        //     Monthly: '$5',
+        //     diskSpace: '500GB',
+        //     dataTransfer: '5000GB/Mo',
+        //     sitePages: 50,
+        //     discountMonths: [6, 7]
+        // }
+        // let ultimate = {
+        //     Monthly: '$10',
+        //     diskSpace: '200GB',
+        //     dataTransfer: '2000GB/Mo',
+        //     sitePages: 500,
+        //     discountMonths: [6, 7]
+        // }
+
+        // let basicDiscount = basic.Monthly.slice(1)
+        // let professionalDiscount = professional.Monthly.slice(1)
+        // let ultimateDiscount = ultimate.Monthly.slice(1) 
+        // // let month = new Date()
+        // let month = 6
+        // for (let i = 0; i < basic.discountMonths.length; i++) {
+        //     if(basic.discountMonths[i] == month){
+        //         basicDiscount = basic.Monthly.slice(1) * 0.85
+        //         console.log(basicDiscount);
+        //         console.log(basic.discountMonths[i]);
+        //     }
+        //     if(professional.discountMonths[i] == month){
+        //         professionalDiscount = professional.Monthly.slice(1) * 0.85
+        //     }
+        //     if(ultimate.discountMonths[i] == month){
+        //         ultimateDiscount = ultimate.Monthly.slice(1) * 0.85
+        //     }
+        // }
+        // basicDiscount = '$' + Math.round((basicDiscount * 12))
+        // professionalDiscount = '$' + Math.round((professionalDiscount * 12))
+        // ultimateDiscount = '$' + Math.round((ultimateDiscount * 12))
+
+        // if(basicDiscount == basic.Monthly.slice(0)){
+        //     basicDiscount = 'No Discount'
+        // }
+        // if(professionalDiscount == professional.Monthly.slice(0)){
+        //     professionalDiscount = 'No Discount'
+        // }
+        // if(ultimateDiscount == ultimate.Monthly.slice(0)){
+        //     ultimateDiscount = 'No Discount'
+        // }
+
+
+
+        // document.getElementById('tbody').innerHTML = `<tr>
+        //     <th>Monthly</th>
+        //     <td>${basic.Monthly}</td>
+        //     <td>${professional.Monthly}</td>
+        //     <td>${ultimate.Monthly}</td>    
+        // </tr>
+        // <tr>
+        //     <th>DiskSpace</th>
+        //     <td>${basic.diskSpace}</td>
+        //     <td>${professional.diskSpace}</td>
+        //     <td>${ultimate.diskSpace}</td>
+        // </tr>
+        // <tr>
+        //     <th>DataTransfer</th>
+        //     <td>${basic.dataTransfer}</td>
+        //     <td>${professional.dataTransfer}</td>
+        //     <td>${ultimate.dataTransfer}</td>
+        // </tr>
+        // <tr>
+        //     <th>SitePages</th>
+        //     <td>${basic.sitePages}</td>
+        //     <td>${professional.sitePages}</td>
+        //     <td>${ultimate.sitePages}</td>
+        // </tr>
+        // <tr>
+        //     <th>Discounted Price</th>
+        //     <td>${basicDiscount}</td>
+        //     <td>${professionalDiscount}</td>
+        //     <td>${ultimateDiscount}</td>
+        // </tr>`
+
+        function ConstructorFunc(Monthly, diskSpace, dataTransfer, sitePages, discountMonths, discountPercent) {
+            this.Monthly = Monthly
+            this.diskSpace = diskSpace
+            this.dataTransfer = dataTransfer
+            this.sitePages = sitePages
+            this.discountMonths = discountMonths
+            this.discountPercent = discountPercent
+            this.calc = function() {
+                let Discount = Monthly.slice(1)
+                // month = new Date()
+                let month = 6
+                for (let i = 0; i < discountMonths.length; i++) {
+                    if (discountMonths[i] == month) {
+                        Discount = Monthly.slice(1) * discountPercent
+                        console.log(Discount);
+                        console.log(discountMonths[i]);
+                        break
+                    }
+                }
+                Discount = '$' + Math.round((Discount * 12))
+                console.log(Discount);
+
+                if (Discount == Monthly) {
+                    Discount = 'No Discount'
+                }
+                
+                return Discount
+            }
+        }
+
+        let basic = new ConstructorFunc('$3', '100GB', '1000GB/Mo', 10, [6, 7], 0.85)
+        let professional = new ConstructorFunc('$5', '500GB', '5000GB/Mo', 50, [6, 7], 0.85)
+        let ultimate = new ConstructorFunc('$10', '200GB', '20000GB/Mo', 500, [6, 7], 0.85)
+
+        document.getElementById('tbody').innerHTML = `<tr>
+            <th>Monthly</th>
+            <td>${basic.Monthly}</td>
+            <td>${professional.Monthly}</td>
+            <td>${ultimate.Monthly}</td>    
+        </tr>
+        <tr>
+            <th>DiskSpace</th>
+            <td>${basic.diskSpace}</td>
+            <td>${professional.diskSpace}</td>
+            <td>${ultimate.diskSpace}</td>
+        </tr>
+        <tr>
+            <th>DataTransfer</th>
+            <td>${basic.dataTransfer}</td>
+            <td>${professional.dataTransfer}</td>
+            <td>${ultimate.dataTransfer}</td>
+        </tr>
+        <tr>
+            <th>SitePages</th>
+            <td>${basic.sitePages}</td>
+            <td>${professional.sitePages}</td>
+            <td>${ultimate.sitePages}</td>
+        </tr>
+        <tr>
+            <th>Discounted Price</th>
+            <td>${basic.calc()}</td>
+            <td>${professional.calc()}</td>
+            <td>${ultimate.calc()}</td>
+        </tr>
+        `
+    </script>
+</body>
+
+</html>
