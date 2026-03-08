@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+
+<style>
+    body {
+        color: white;
+        background: #000;
+    }
+
+    button {
+        padding: 30px 60px;
+        font-size: 22px;
+        font-weight: 600;
+    }
+</style>
+
+<body>
+
+    <button onclick="setLocalStorage(0)">Set Item on localStorage</button>
+    <button onclick="setLocalStorage(1)">Delete Set Item on localStorage</button>
+    <button onclick="setSessionStorage(0)">Set Item on sessionStorage</button>
+    <button onclick="setSessionStorage(1)">Delete Set Item on sessionStorage</button>
+
+    <script>
+        // localStorage
+        // sessionStorage
+        // setItem, getItem, removeItem, clear
+        function setLocalStorage(i) {
+
+            if (i === 1) {
+                localStorage.clear();
+            } else {
+                localStorage.setItem("localKey", "localValue")
+                localStorage.setItem("localKey2", "localValue2")
+                localStorage.setItem("localKey3", "localValue3")
+                localStorage.setItem("localKey4", "localValue4")
+                localStorage.setItem("localKey5", "localValue5")
+                localStorage.setItem("localKey6", "localValue6")
+                localStorage.setItem("localKey7", "localValue7")
+            }
+
+        }
+
+        // console.log(localStorage.getItem("localKey"))
+
+        // localStorage.removeItem("localKey")
+
+        // 
+
+        function setSessionStorage(i) {
+            if(i === 0){
+                sessionStorage.setItem("sessionKey1", "sessionValue")
+                sessionStorage.setItem("sessionKey2", "sessionValue")
+                sessionStorage.setItem("sessionKey3", "sessionValue")
+                sessionStorage.setItem("sessionKey4", "sessionValue")
+            }else{
+                sessionStorage.removeItem("sessionKey1");
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time</title>
+    <style>
+        #time{
+            font-size: 300px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>   
+    <div id="time"></div>
+    <script>
+        setInterval(function () {
+            let now = new Date()
+            // now.setSeconds(1)
+            let hours = now.getHours()
+            if (hours == 0) {
+                hours = 12
+            } else if (hours > 12) {
+                hours = hours - 12
+            }
+            let sec = now.getSeconds()
+            sec = `${sec}`
+            if(sec.length == 1){
+                sec = '0' + sec
+            }
+            document.getElementById('time').innerText = `${hours}:${now.getMinutes()}:${sec}`
+        }, 1)
+        try {
+            let variable = 1
+            if(variable == 11){
+                throw 'Eroorrrr'
+            }
+            console.log(variable1);
+            document.write(variable1);
+        } catch (error) {
+            console.log(error);
+            document.write(error)
+        }
+        
+    </script>
+</body>
+
+</html>

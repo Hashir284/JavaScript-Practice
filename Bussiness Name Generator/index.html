@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="generate()">Click on me</button>
+
+<h2 id="result"></h2>
+
+    <!-- <button onclick="adjective()">Click on me</button> -->
+    <script>
+        function adjective() {
+    let num = Math.ceil(Math.random() * 3)
+
+    if (num == 1) {
+        return "Crazy"
+    } else if (num == 2) {
+        return "Amazing"
+    } else {
+        return "Fire"
+    }
+}
+
+function shop() {
+    let num = Math.ceil(Math.random() * 3)
+
+    if (num == 1) {
+        return "Engine"
+    } else if (num == 2) {
+        return "Food"
+    } else {
+        return "Garments"
+    }
+}
+
+function word() {
+    let num = Math.ceil(Math.random() * 3)
+
+    if (num == 1) {
+        return "Bros"
+    } else if (num == 2) {
+        return "Limited"
+    } else {
+        return "Hub"
+    }
+}
+
+function generate() {
+    let finalName = adjective() + " " + shop() + " " + word()
+    document.getElementById("result").innerText = finalName
+}
+    </script>
+</body>
+</html>
