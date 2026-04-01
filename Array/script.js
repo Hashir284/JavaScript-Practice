@@ -4,11 +4,18 @@ let cities = ["Karachi", "Lahore", "Islamabad", "Peshawar", "Quetta"];
 
 let citiesa = cities.slice(1, 4)
 console.log(cities)
-let citiesb = cities.splice(1, 4)
+// let citiesb = cities.splice(1, 4)
 console.log(cities)
 console.log(citiesa)
-console.log(citiesb)
+// console.log(citiesb)
 
+
+// .toString
+// .join(' ')
+// .delete
+// .concat  // for join the arrays ye original array change nhi kerta
+
+// .foreach()
 // .push()       // Array k End mai value add krta hai 
 // .pop()       //  Array k End mai se 1 item ko remove krdeta hai
 // .unshift()  //   Array k Start mai value add krta hai 
@@ -37,3 +44,11 @@ console.log(citiesb)
 
 // console.log(someCities)
 // console.log(cities)
+
+let a = cities.toString()
+console.log(a);
+cities.toString()
+console.log(cities);
+
+
+

@@ -26,8 +26,10 @@
         let p = document.getElementsByTagName('p')
         console.log(p[1].innerHTML);
         console.log(p[1].innerText);
+        p[1].innerText = 'Update Para 2'
         function fun() {
             p[0].innerText = 'Update Para 1'
+            p[1].innerText = 'Para 2'
             for (let i = 0; i < p.length; i++) {
                 p[i].style.fontFamily = "Verdana, Geneva, sans-serif";
             }

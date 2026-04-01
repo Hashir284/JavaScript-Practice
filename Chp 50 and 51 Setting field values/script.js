@@ -23,15 +23,23 @@
             if (i === 'full') {
                 document.getElementById('p').innerHTML = fullpara.slice(0) + `<a href='#' onclick="get('less')">See less</a>`
             } else if (i === 'less') {
-                document.getElementById('p').innerHTML = fullpara.slice(0, 160) + `<a href='#' onclick="get('full')">See more</a>`
+                document.getElementById('p').innerHTML = fullpara.slice(0, 160) + ` <a href='#' onclick="get('full')">See more</a>`
             }
         }
-        let p = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo eaque at voluptatem, labore repudiandae id odit animi sed molestias iusto ut vel optio'
-        console.log(p.length);
-        console.log('a');
-        console.log('dadas', 21312321, 2332421412243);
-        console.log('ad');
-        console.log();
+        function expandLoris() {
+ var expandedParagraph = `Slow lorises are a group of several species of trepsirrhine primates which
+make up the genus Nycticebus. They have a round head, narrow snout, large eyes, and a variety of
+distinctive coloration patterns that are species-dependent. The hands and feet of slow lorises have several
+adaptations that give them a pincer-like grip and enable them to grasp branches for long periods of time.
+Slow lorises have a toxic bite, a rare trait among mammals.`;
+document.getElementById("slowLoris").innerHTML = expandedParagraph;
+ }
+        // let p = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo eaque at voluptatem, labore repudiandae id odit animi sed molestias iusto ut vel optio'
+        // console.log(p.length);
+        // console.log('a');
+        // console.log('dadas', 21312321, 2332421412243);
+        // console.log('ad');
+        // console.log();
         
-        console.log('clg', 'qdeq');'ddd'
+        // console.log('clg', 'qdeq');'ddd'
 
