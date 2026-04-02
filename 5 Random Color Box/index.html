@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Clicker+Script&family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:wght@200;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #0f172a, #020617);
+            font-family: 'Jost', 'Segoe UI', sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .boxes {
+            display: flex;
+            gap: 25px;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+
+            height: 390px;
+            width: 220px;
+            padding: 20px;
+
+            border-radius: 18px;
+            /* backdrop-filter: blur(10px); */
+
+            font-size: 18px;
+            /* overall text bigger */
+            font-weight: 600;
+            color: white;
+            border: white 2px solid;
+            transition: all 0.45s ease;
+            /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); */
+        }
+
+        .box:hover {
+            transform: translateY(-3px) scale(1.01);
+        }
+
+        .box div:first-child {
+            font-size: 28px;
+            font-weight: 900;
+        }
+
+        .box div {
+            font-size: 19px;
+            font-weight: 600;
+        }
+
+        button {
+            border: 1px solid #fff;
+            padding: 19px 28px;
+            /* border: none; */
+            border-radius: 10px;
+            background: rgb(229, 15, 22);
+            color: #fff;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 10px #38bdf8;
+        }
+
+        .d {
+            text-align: center;
+            width: 100%;
+        }
+
+        .d>div {
+            font-weight: 700;
+            font-size: 23px;
+        }
+        .box, button {
+            /* -webkit-text-stroke: 1px black; */
+    text-shadow: 
+    1px -1px 0 rgb(0,0,0,0.6),
+    -1px  1px 0 rgb(0,0,0,0.6),
+    -1px -1px 0 rgb(0,0,0,0.6),
+         1px  1px 0 rgb(0,0,0,0.6);
+}
+    </style>
+</head>
+
+<body>
+    <!-- 
+        Given 5 boxes, Assign a random color and a random background to each box using DOM concepts
+     -->
+    <div class="container">
+        <div class="boxes">
+            <div class="box">Box</div>
+            <div class="box">Box</div>
+            <div class="box">Box</div>
+            <div class="box">Box</div>
+            <div class="box">Box</div>
+        </div>
+        <button onclick="color()">Get Random Colors</button>
+    </div>
+    <script>
+        let b = document.getElementsByClassName('box')
+        function color() {
+            for (let i = 0; i < b.length; i++) {
+                let c = `rgb(${Math.ceil((Math.random() * 1) * 255)}, ${Math.ceil((Math.random() * 1) * 255)}, ${Math.ceil((Math.random() * 1) * 255)})`
+                b[i].style.color = c
+                let bg = `rgb(${Math.ceil((Math.random() * 1) * 255)}, ${Math.ceil((Math.random() * 1) * 255)}, ${Math.ceil((Math.random() * 1) * 255)})`
+                b[i].style.backgroundColor = bg
+                b[i].style.fontSize = '12px'
+                b[i].innerHTML = `<div>Box${i + 1}</div>
+    <div class='d'>Text-Color: <br><div>${c}</div></div>
+    <div class='d'>Background-Color: <br><div>${bg}</div></div>`
+            }
+        }
+        color()
+    </script>
+</body>
+
+</html>
