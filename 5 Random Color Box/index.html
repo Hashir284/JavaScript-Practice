@@ -10,9 +10,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:wght@200;500;600&display=swap" rel="stylesheet">
 
     <style>
+        *{box-sizing: border-box;}
         body {
             height: 100vh;
             margin: 0;
+            padding: 32px 25px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -30,9 +32,12 @@
         .boxes {
             display: flex;
             gap: 25px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .box {
+            box-sizing: content-box;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -103,6 +108,11 @@
     -1px  1px 0 rgb(0,0,0,0.6),
     -1px -1px 0 rgb(0,0,0,0.6),
          1px  1px 0 rgb(0,0,0,0.6);
+}
+@media screen and (max-width: 920px) {
+    body {
+        height: 100%;
+    }
 }
     </style>
 </head>
