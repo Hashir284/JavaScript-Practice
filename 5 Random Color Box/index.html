@@ -129,11 +129,12 @@
             <div class="box">Box</div>
             <div class="box">Box</div>
         </div>
-        <button onclick="color()">Get Random Colors</button>
+        <button onclick="color2()">Get Random Colors</button>
     </div>
     <script>
         let b = document.getElementsByClassName('box')
         function color() {
+            console.log(Math.floor(Math.random() * (255 - 0 + 1)) + 0);
             for (let i = 0; i < b.length; i++) {
                 let c = `rgb(${Math.ceil((Math.random() * 1) * 255)}, ${Math.ceil((Math.random() * 1) * 255)}, ${Math.ceil((Math.random() * 1) * 255)})`
                 b[i].style.color = c
@@ -145,7 +146,28 @@
     <div class='d'>Background-Color: <br><div>${bg}</div></div>`
             }
         }
-        color()
+        function randomInteger(min, max) {
+          return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        function color2() {
+            console.log(Math.floor(Math.random() * (255 - 0 + 1) + 0));
+            for (let i = 0; i < b.length; i++) {
+                let c = `rgb(${randomInteger(0, 255)}, ${randomInteger(0, 255)}, ${randomInteger(0, 255)})`
+                b[i].style.color = c
+                let bg = `rgb(${randomInteger(0, 255)}, ${randomInteger(0, 255)}, ${randomInteger(0, 255)})`
+                b[i].style.backgroundColor = bg
+                b[i].style.fontSize = '12px'
+                b[i].innerHTML = `<div>Box${i + 1}</div>
+    <div class='d'>Text-Color: <br><div>${c}</div></div>
+    <div class='d'>Background-Color: <br><div>${bg}</div></div>`
+            }
+        }
+
+
+
+
+        
+        color2()
     </script>
 </body>
 

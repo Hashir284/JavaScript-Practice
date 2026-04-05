@@ -13,15 +13,13 @@ console.log(citiesa)
 // .toString
 // .join(' ')
 // .delete
+// Array.from
 // .concat  // for join the arrays ye original array change nhi kerta
-
 // .foreach()
 // .push()       // Array k End mai value add krta hai 
 // .pop()       //  Array k End mai se 1 item ko remove krdeta hai
 // .unshift()  //   Array k Start mai value add krta hai 
 // .shift()   //    Array k Start mai se 1 item ko remove krdeta hai
-
-
 // .splice()    || Array k kisi bhi index mai value add aur remove krwa skta hai
 // .slice()     || Array ki copy banata hai array ko change kiye bagair
 

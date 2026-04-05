@@ -3,5 +3,5 @@ b.forEach(e=>{
     console.log(e);
 })
 b.forEach((value, index, arr)=>{
-    console.log(value, index, arr);
+    console.log(value, index)//, arr);
 }) 

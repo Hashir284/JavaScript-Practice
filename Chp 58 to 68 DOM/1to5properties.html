@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body{
+            background: #000;
+            color: #fff;
+            font-size: 25px;
+            div{
+                margin: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container"><div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div></div>
+    <div class="container">
+        <div class="box">4</div>
+        <div class="box">5</div></div>
+    <script>
+        // document.body.childNodes[1].childNodes[0].style.backgroundColor = 'green'
+        //document.body.childNodes[1].firstChild
+        //document.body.childNodes[1].lastChild
+        // document.body.childNodes[1].firstElementChild
+        // document.body.childNodes[1].lastElementChild  ///////////5
+
+        document.body.childNodes[1].childNodes[2].innerText = '.childNodes'
+        document.body.childNodes[1].firstChild.innerText = '.firstChild'
+        document.body.childNodes[1].lastChild.innerText = '.lastChild'
+        document.body.childNodes[3].lastElementChild.innerText = '.lastChild'
+        document.body.childNodes[3].firstElementChild.innerText = '.firstElementChild'
+    </script>
+</body>
+</html>

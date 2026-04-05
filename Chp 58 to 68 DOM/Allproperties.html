@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box {
+        height: 45px;
+        width: 56px;
+        border: 2px solid black;
+        margin: 5px;
+        padding: 5px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box" id="b4">box4</div>
+        <div class="box">box5</div>
+    </div>
+    <table>
+
+    </table>
+    <script>
+        // document.body.childNodes[1].childNodes[0].style.backgroundColor = 'green'
+        //document.body.childNodes[1].firstChild
+        //document.body.childNodes[1].lastChild
+        // document.body.childNodes[1].firstElementChild
+        // document.body.childNodes[1].lastElementChild  ///////////5
+        // document.body.childNodes[1].parentElement
+        // document.documentElement.parentNode  --> #document
+        // document.documentElement.parentElement  --> null
+        // document.body.firstElementChild.children 
+        // document.body.firstElementChild.children[1]  ////////6 to 10
+        // document.body.firstElementChild.children[1].nextElementSibling
+        // document.body.firstElementChild.children[1].previousElementSibling
+        // document.body.firstElementChild.children[1].nextSibling
+        // document.body.firstElementChild.children[1].previousSibling
+        // var target = document.getElementById("div1");
+        // target.setAttribute("class, "special");
+        // .hasAttribute('class')
+        // .getAttribute('class') 
+        // .nodeType //for checking type
+        // .nodevalue //for checking value
+        // .nodeName
+        // var list = document.getElementById("p1").attributes;
+        // var newParagraph = document.createElement("p");
+        // var parentDiv = document.getElementById("div1")
+        // var t = document.createTextNode("Hello world!");
+        // var target = parentDiv.childNodes[1];
+        // parentDiv.insertBefore(newE, target.nextSibling);
+        // var parentDiv = document.getElementById("div1");
+        // var nodeToRemove = parentDiv.childNodes[2];
+        // parentDiv.removeChild(nodeToRemove);
+        // parentDiv.appendChild(nodeToRemove);
+        // document.getElementsByClassName('box')[2].style.backgroundColor = 'red'
+        // document.getElementById('green').style.background = 'Green'
+        // document.querySelector('.box').style.background = 'Green'
+        var list = document.getElementById("b4").attributes;
+        console.log(list);
+        console.log(list.length);
+        console.log(list.nodeName);
+
+        // document.querySelector('box').innerHTML
+        // document.querySelector('box').remove
+        // document.querySelector('box').className
+        // document.querySelector('box').classList
+        // document.querySelector('box').classList.add('harry')
+        // document.querySelector('box').classList.remove('harry')
+        // document.querySelector('box').classList.toggle('harry')
+        // document.querySelector('box').outerHTML
+        // document.querySelector('container').innerText 
+        // document.querySelector('container').tagName
+        // document.querySelector('container').nodeName
+        // document.querySelector('container').textContent
+        // console.log(document.querySelector('.container').hidden);  //---> ye true false return kerta
+        // console.log(document.querySelector('.container').hidden = true);  //---> ye true false return kerta
+        // document.designMode = 'on'
+        // document.querySelector('box').hasAttribute .get .setAttribute('id', '1')
+        //  .attributes .removeAttribute('style')
+        console.log(document.querySelector('.div').dataset);
+        // let div = document.createElement("div");
+        // div.innerHTML = "I have been inserted <b>by harry</b>"
+        // div.setAttribute("class", "created");
+        // document.querySelector(".container").before(div);
+
+    </script>
+</body>
+
+</html>

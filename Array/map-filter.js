@@ -1,7 +1,7 @@
 //map
 let arr = [1,13,17,19,21]
-let newarr = arr.map((element, index, array)=>{
-    return element**2
+let newarr = arr.map((value, index, array)=>{
+    return value*2
 })
 console.log(newarr);
 
@@ -26,5 +26,12 @@ console.log(arr.reduce(reducee));
  
 // ye teenon methods original array ko change nhi kerte 
 
-
-
+//filter
+let aa = [2,3,4,22,34,54,785]
+aa = aa.filter((e)=>{
+    if(e > 1){
+        return true
+    }
+    return false
+})
+console.log(aa);
