@@ -16,13 +16,19 @@
         <div class="box">5</div>
     </div>
     <script>
-        let arr = ['.childNodes', '.firstChild', '.lastChild', '.firstElementChild', '.lastElementChild', 'document.documentElement.parentNode', 'parentNode', 'parentElement', 'children  -- Html Collection || -- Array']
+        let arr = ['.childNodes', '.firstChild', '.lastChild', '.firstElementChild', '.lastElementChild', 'document.documentElement.parentNode', '.parentNode', '.parentElement', '.children  -- Html Collection || -- Array', '.nextElementSibling', '.previousElementSibling', '.nextSibling', '.previousSibling', '.setAttribute("class", "special")']
         // let dom = document.body.firstElementChild.children
         // arr.forEach((e, i) => {
         //     dom[i].innerText = i+1 + ' .' + e
         //     console.log(arr[i]);
             
         // });
+        document.body.firstElementChild.children[1].nextElementSibling
+        // document.body.firstElementChild.children[1].previousElementSibling
+        // document.body.firstElementChild.children[1].nextSibling
+        // document.body.firstElementChild.children[1].previousSibling
+        // var target = document.getElementById("div1");
+        // target.setAttribute("class, "special");////////////////////10 to 15
         // console.log(dom);
         // console.log(dom.length);
         document.querySelector('.con').innerHTML = ''

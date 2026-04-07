@@ -31,3 +31,14 @@ do {
 */
 
 // Commenting
+
+var iii = 0 
+while (iii<9) {
+    console.log(iii);
+    iii++
+}
+iii=0
+do {
+    console.log(iii);
+    iii++    
+} while (iii<9);

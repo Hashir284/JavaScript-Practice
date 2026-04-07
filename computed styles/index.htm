@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>getComputedStyle Example</title>
+  <style>
+    #mainPic {
+      width: 200px;
+      height: 100px;
+      margin: 20px 40px 20px 40px; /* top, right, bottom, left */
+      background-color: lightblue;
+    }
+  </style>
+</head>
+<body style="background: #000; color: #fff;">
+
+<div id="mainPic">Hello</div>
+
+<script>
+  // Get the element
+  var mainPic = document.getElementById("mainPic");
+
+  // Get computed styles
+  var style = window.getComputedStyle(mainPic);
+
+  // Access the margin
+  console.log("Full margin:", style.margin); // e.g., "20px 40px 20px 40px"
+  console.log("Margin Top:", style.marginTop);       // "20px"
+  console.log("Margin Right:", style.marginRight);   // "40px"
+  console.log("Margin Bottom:", style.marginBottom); // "20px"
+  console.log("Margin Left:", style.marginLeft);     // "40px"
+</script>
+
+</body>
+</html>

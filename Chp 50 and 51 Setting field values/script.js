@@ -14,7 +14,6 @@
                     break
             }
             document.getElementById('city').value = city 
-            locationv
         }   
 
         //Chp 51

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background: #000; color: #fff;">
+    <div class="con">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+
+    <script>
+        // document.body.firstElementChild.children[1].nextElementSibling
+        // document.body.firstElementChild.children[1].previousElementSibling
+        // document.body.firstElementChild.children[1].nextSibling
+        // document.body.firstElementChild.children[1].previousSibling
+        // var target = document.getElementById("div1");
+        // target.setAttribute("class, "special");////////////////////10 to 15
+        
+        document.body.firstElementChild.children[1].previousElementSibling.innerText = 'preveiousElementSibling'
+        document.body.firstElementChild.children[1].nextElementSibling.innerText = 'nextElementSibling'
+        console.log(document.body.firstElementChild.children[1].nextSibling);
+        console.log(document.body.firstElementChild.children[1].previousSibling);
+        let clsss = document.body.firstElementChild.children[1].previousElementSibling.className
+        console.log(document.body.firstElementChild.children[1].previousElementSibling.setAttribute('class', clsss + ' setAttribute'));
+        
+    </script>
+</body>
+
+</html>
