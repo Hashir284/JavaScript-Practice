@@ -6,12 +6,12 @@ let newarr = arr.map((value, index, array)=>{
 console.log(newarr);
 
 //filter
-let greaterthen13 = (e)=>{
-    if(e>13){
-        return true
+    let greaterthen13 = (e)=>{
+        if(e>13){
+            return true
+        }
+        return false
     }
-    return false
-}
 arr.filter(greaterthen13)
 console.log(arr);
 console.log(arr.filter(greaterthen13));
