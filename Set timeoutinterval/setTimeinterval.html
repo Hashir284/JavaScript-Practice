@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+const sum = (a,b,c) =>{
+    let am = Math.random() 
+    if (am < 0.2) {
+        console.log('Yes, I am running', a + b * c);
+    } else if(am < 0.45) {
+        console.log('Yes, I am running', a + b / c);
+    }else if(am < 0.69){
+        console.log('Yes, I am running', a + b + c);
+    }else{
+        console.log('Yes, I am running', a + b - c);
+    }
+    return a + b
+}
+
+// setTimeout(sum, 2000, 1, 23, 10)
+let num = 0
+let num2 = 800
+let f = ()=> {num++; return num}
+let m = ()=> {num2--; return num2}
+
+let a = setInterval(sum, 1000, f(),m(),f())
+setTimeout(()=>{
+    clearInterval(a)
+}, 2000)
+
+    </script>
+</body>
+</html>

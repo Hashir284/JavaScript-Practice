@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        setTimeout(() => {
+            document.write('setTimeout')
+            console.log('setTimeout 1');
+
+        }, 2000)
+        let a = setTimeout(() => {
+            console.log('let setTimeout abc');
+        }, 1000)
+        setTimeout(() => {
+            document.write('setTimeout2')
+            console.log('setTimeout2');
+
+        }, 3000)
+
+        console.log(a);
+
+        let b = prompt('settimeout y or n')
+        if (b.trim() === 'n') {
+            clearTimeout(a)
+        }
+
+        console.log('not');
+
+
+    </script>
+</body>
+
+</html>
