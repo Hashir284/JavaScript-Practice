@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacking Dark Site</title>
+</head>
+
+<body style="background: #000; color: green;">
+    <div class="container">
+        <div id="t1"></div>
+        <div id="t2"></div>
+        <div id="t3"></div>
+        <div id="t4"></div>
+        <div id="t5"></div>
+    </div>
+</body>
+
+<script>
+
+    function heck(msg, AppearingTime, dotBlinkTime, id) {
+        return new Promise((resolve, rej) => {
+            setTimeout(() => {
+                fun(msg, dotBlinkTime, id)
+                resolve(msg)
+            }, AppearingTime)
+        })
+    }
+
+    function fun(html, dotBlinkTime, id) {
+        setInterval(() => {
+            if(!html.endsWith('...')){
+                document.getElementById(id).innerHTML = html
+                html += '.'
+            }
+            if (html.endsWith('...')) {
+                document.getElementById(id).innerHTML = html
+                html = html.slice(0, -3)
+            }
+        }, dotBlinkTime)
+    }
+
+    async function call() {
+        let a = await heck('Initializing Hacking', 0, 250, 't1')
+        let b = await heck('Reading your Files...', 250, 150, 't2')
+        let c = await heck('Password files Detected...', 500, 125, 't3')
+        let d = await heck('Sending all passwords and personal files to server...', 750, 100, 't4')
+        let e = await heck('Cleaning up...', 1000, 75, 't5')
+        console.log(a);
+        console.log(b);
+        console.log(c);
+        console.log(d);
+        console.log('e',Promise.resolve(e));
+        console.log(await heck('Cleaning up...', 3000, 75, 't5'));    
+    }
+    call()
+
+    let promise = new Promise((r,re)=>{
+        r('Yes')
+    })
+    console.log(promise);
+    
+
+
+</script>
+
+</html>

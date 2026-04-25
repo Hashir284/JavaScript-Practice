@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let a = 'e'
+        let b = 'e'
+        let result = a+b
+        try{
+            if(isNaN(a)||isNaN(a)){
+                throw SyntaxError('This is not allowed')
+            }
+        }catch(err){
+            console.log(err.name);    
+            console.log(err);
+        }
+        finally{
+            console.log('try/cach completed');
+        }
+        console.log(result);
+        // alert(result)
+
+    </script>
+</body>
+</html>
